@@ -21,6 +21,7 @@
         <java.version>11</java.version>
         <micrometer.version>1.9.5</micrometer.version>
         <opentelemetry.version>1.19.0</opentelemetry.version>
+        <logback.version>1.4.14</logback.version>
     </properties>
     
     <dependencies>
@@ -77,6 +78,13 @@
             <groupId>com.github.loki4j</groupId>
             <artifactId>loki-logback-appender</artifactId>
             <version>1.6.0</version>
+        </dependency>
+
+        <!-- Override Spring Boot's default Logback -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
         </dependency>
     </dependencies>
     
